@@ -1,6 +1,7 @@
 class Carousel {
     constructor(carousel) {
         console.log(carousel);
+
         this.leftButton = carousel.querySelector(".left-button");
         this.rightButton = carousel.querySelector(".right-button");
         this.images = carousel.querySelectorAll("img");
@@ -23,7 +24,10 @@ class Carousel {
 
             this.images.forEach(image => image.style.display = "none");
             this.images[this.currentIndex].style.display = "block"; 
+            
         }
+        
+        this.animate();
     }
 
     moveRight(){
@@ -36,7 +40,19 @@ class Carousel {
 
         this.images.forEach(image => image.style.display = "none");
         this.images[this.currentIndex].style.display = "block";
+        this.animate();
     }
+
+    animate() {
+        // question: how to set up time for keyframes, since each browser
+        // is running in runtime. 
+
+        // do you set up a timer, with a counter? 
+        this.images[this.currentIndex].style.animationPlayState = "running";
+
+        // https://stackoverflow.com/questions/6121203/how-to-do-fade-in-and-fade-out-with-javascript-and-css
+    }
+
 }
 
 let carousel = document.querySelector(".carousel");
