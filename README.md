@@ -32,13 +32,25 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+*The DOM is an API which provides direct access and manipulation to HTML elements. It treats each HTML elements as a series of nodes under one large hierarchical tree data structure, which branches out.* 
+
+*The web browser's document object is the parent node, & each individual html element & class & their respective nested elements/classes represent children nodes or grandchild nodes of the parent.*
+
 2. What is an event?
+
+*An event is an object that is created in the web browser (during runtime) as a result of an action taken by the user/client.*
 
 3. What is an event listener?
 
+*An event listener detects for events in the web browser & callbacks functions each time an event is released in the browser during runtime.* 
+
 4. Why would we convert a NodeList into an Array?
 
+*Converting the NodeList into an Array allows for an efficient data structure to index, get, access, or manipulate individual HTML nodes & their respective elements using the forEach(), map(), filter(), and reduce() methods.*
+
 5. What is a component?
+
+*A component is a class that acts as an extra feature, when instantiated for each HTML node in the browser. It adds extra functionality (i.e. component methods) - in other words, it is a toolbox of tools that each HTML node & its properties has access to after the HTML node & properties bind to the component.*  
 
 ### Git Set up
 
